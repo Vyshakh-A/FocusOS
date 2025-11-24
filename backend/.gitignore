@@ -1,0 +1,51 @@
+## Node / backend gitignore
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime/PM2/pids
+pids
+*.pid
+*.seed
+.pid.lock
+
+# dotenv environment files (do NOT commit secrets)
+.env
+.env.*
+
+# Node modules and build output
+node_modules/
+dist/
+build/
+
+# Coverage and test output
+coverage/
+.nyc_output/
+
+# IDE/editor directories
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Optional package manager files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Cache and temp folders
+.cache/
+.tmp/
+.vite/
+
+# Logs created by npm scripts
+npm-debug.log

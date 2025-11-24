@@ -22,3 +22,24 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files (do NOT commit secrets)
+.env
+.env.*
+
+# Vite / build caches and outputs
+.vite
+.cache
+build
+out
+coverage
+
+# Optional package manager files and caches
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+.pnp.cjs
+
+# OS files
+Thumbs.db
+ehthumbs.db
