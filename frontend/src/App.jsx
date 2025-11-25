@@ -1,17 +1,26 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Dashboard from './pages/Dashboard.jsx'
-import Login from './pages/Login.jsx'
-import Register from './pages/Register.jsx'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 const App = () => {
   return (
     <Routes>
-      <Route path = '/' element = {<Login />} />
-      <Route path = '/register' element = {<Register />} />
-      <Route path = '/dashboard' element = {<Dashboard />} />
-    </Routes>
-  )
-}
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-export default App
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
+  );
+};
+
+export default App;
