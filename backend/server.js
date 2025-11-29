@@ -5,6 +5,8 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
+import notesRoutes from "./routes/notesRoutes.js";
+import ReflectionHistory from "./models/ReflectionHistory.js";
 
 dotenv.config();
 connectDB();
@@ -16,6 +18,8 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
+app.use("/api/notes", notesRoutes);
+app.use("/api/reflection", ReflectionHistory);
 
 app.get("/", (req, res) => {
   res.send("API is running...");
